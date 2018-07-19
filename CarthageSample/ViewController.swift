@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import BitcoinKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let address = try! AddressFactory.create("bitcoincash:qz936smm809wq0eqthqyh2sgdzhs7v08nvnuq0dmps")
+        print(address.base58, address.cashaddr)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

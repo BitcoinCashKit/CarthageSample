@@ -12,6 +12,7 @@
 		29D2957F21001FA10087ED89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D2957D21001FA10087ED89 /* Main.storyboard */; };
 		29D2958121001FA20087ED89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D2958021001FA20087ED89 /* Assets.xcassets */; };
 		29D2958421001FA20087ED89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D2958221001FA20087ED89 /* LaunchScreen.storyboard */; };
+		29D2958E210026BC0087ED89 /* BitcoinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D2958D210026BC0087ED89 /* BitcoinKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		29D2958021001FA20087ED89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29D2958321001FA20087ED89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29D2958521001FA20087ED89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D2958D210026BC0087ED89 /* BitcoinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BitcoinKit.framework; path = Carthage/Build/iOS/BitcoinKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D2958E210026BC0087ED89 /* BitcoinKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				29D2957821001FA10087ED89 /* CarthageSample */,
 				29D2957721001FA10087ED89 /* Products */,
+				29D2958C210026BC0087ED89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = CarthageSample;
 			sourceTree = "<group>";
 		};
+		29D2958C210026BC0087ED89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29D2958D210026BC0087ED89 /* BitcoinKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +83,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D2958821001FA20087ED89 /* Build configuration list for PBXNativeTarget "CarthageSample" */;
 			buildPhases = (
+				29D2958B210025DC0087ED89 /* Carthage Script */,
 				29D2957221001FA10087ED89 /* Sources */,
 				29D2957321001FA10087ED89 /* Frameworks */,
 				29D2957421001FA10087ED89 /* Resources */,
@@ -129,6 +142,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29D2958B210025DC0087ED89 /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BitcoinKit.framework",
+			);
+			name = "Carthage Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29D2957221001FA10087ED89 /* Sources */ = {
@@ -282,6 +313,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27ZF65ZF69;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +335,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 27ZF65ZF69;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,13 @@
+{
+  "commitish" : "cash-v0.1.2",
+  "iOS" : [
+    {
+      "name" : "KeychainAccess",
+      "hash" : "955d524f66d5b538bf71cddfa708f4e4646f6ca98baff780bae91dd745d78326"
+    },
+    {
+      "name" : "BitcoinKit",
+      "hash" : "1141a74983ef11b8d83b18879010f901305263bb1b6da847f3fda3f5686764a5"
+    }
+  ]
+}
